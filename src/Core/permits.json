@@ -1,0 +1,13 @@
+{
+    "leader": [],
+    "worker": [
+        "UserGroupController",
+        "UsersController"
+    ],
+    "user": [
+        "tableOneController",
+        "tableTwoController",
+        "UserGroupController",
+        "UsersController"
+    ]
+}
