@@ -11,10 +11,10 @@ class ObjectsModel extends DbEntity
     {
         $this
         ->reset()
-        ->setSelect("`objects`.`id`, `objects`.`id_customer`, `objects`.`object_name`, `objects`.`beginning_works`, `objects`.`end_work`, `objects`.`status_objects`, `objects`.`notes`");
-        // ->setFrom("`group_workers`, `workers`")
-        // ->setWhere("`group_workers`.`id` = `workers`.`group_workers`")
-        // ->setOrderBy("`workers`.`id`");
+        ->setSelect("`objects`.`id`, `customer`.`сustomer_name`, `objects`.`object_name`, `objects`.`beginning_works`, `objects`.`end_work`, `objects`.`status_objects`, `objects`.`notes`, `status_objects`.`status_objects`")
+        ->setFrom("`customer`, `objects`, `status_objects`")
+        ->setWhere("`customer`.`id` = `objects`.`id_customer` AND `status_objects`.`id` = `objects`.`status_objects`")
+        ->setOrderBy("`objects`.`id`");
         return parent::getPage($page);
     }
 
