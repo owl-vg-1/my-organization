@@ -19,36 +19,40 @@ class objectsController extends AbstractTableController
         $this->table = new ObjectsModel($this->tableName, DB::Link(Conf::MYSQL));
     }
 
-    // public function actionShowEditForm()
-    // {
-    //     $tableUsersGroup = new DbEntity('group_workers', DB::Link(Conf::MYSQL));
+    public function actionShowEditForm()
+    {
+        $tableCostomer = new DbEntity('customer', DB::Link(Conf::MYSQL));
+        $tableStatusObjects = new DbEntity('status_objects', DB::Link(Conf::MYSQL));
 
-    //     $this->view->setPatternsPath('templates/usersTable/');
+        $this->view->setPatternsPath('templates/objectsTable/');
 
-    //     $this->render("ShowAddEditForm", [
-    //         'columnsNames' => $this->table->getColumnsNames(),
-    //         'editValues' => $this->table->get(['id' => $_GET['id']])[0],
-    //         'URL' => '?t=' . $this->shortClassName() . '&a=Edit&id=' . $_GET['id'],
-    //         'userGroup' => $tableUsersGroup->getColumn('description'),
-    //         'tableHeaders' => $this->table->getColumnsComments()
-    //     ]);
-    // }
+        $this->render("ShowAddEditForm", [
+            'columnsNames' => $this->table->getColumnsNames(),
+            'editValues' => $this->table->get(['id' => $_GET['id']])[0],
+            'URL' => '?t=' . $this->shortClassName() . '&a=Edit&id=' . $_GET['id'],
+            'costomer' => $tableCostomer->getColumn('сustomer_name'),
+            'statusObjects' => $tableStatusObjects->getColumn('status_objects'),
+            'tableHeaders' => $this->table->getColumnsComments()
+        ]);
+    }
 
 
 
-    // public function actionShowAddForm()
-    // {
-    //     $tableUsersGroup = new DbEntity('group_workers', DB::Link(Conf::MYSQL));
+    public function actionShowAddForm()
+    {
+        $tableCostomer = new DbEntity('customer', DB::Link(Conf::MYSQL));
+        $tableStatusObjects = new DbEntity('status_objects', DB::Link(Conf::MYSQL));
 
-    //     $this->view->setPatternsPath('templates/usersTable/');
+        $this->view->setPatternsPath('templates/objectsTable/');
         
-    //     $this->render("ShowAddEditForm", [
-    //         'columnsNames' => $this->table->getColumnsNames(),
-    //         'URL' => '?t=' . $this->shortClassName() . '&a=Add',
-    //         'userGroup' => $tableUsersGroup->getColumn('description'),
-    //         'tableHeaders' => $this->table->getColumnsComments()
-    //     ]);
-    // }
+        $this->render("ShowAddEditForm", [
+            'columnsNames' => $this->table->getColumnsNames(),
+            'URL' => '?t=' . $this->shortClassName() . '&a=Add',
+            'costomer' => $tableCostomer->getColumn('сustomer_name'),
+            'statusObjects' => $tableStatusObjects->getColumn('status_objects'),
+            'tableHeaders' => $this->table->getColumnsComments()
+        ]);
+    }
 
 
 }

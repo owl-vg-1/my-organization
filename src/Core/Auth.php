@@ -54,7 +54,7 @@ class Auth
             strtolower($className),
             array_map(
                 'strtolower',
-                $permits[($_SESSION['user']['group_workers'] ?? 'user')]
+                $permits[($_SESSION['user']['group_workers'] ?? 'alien')]
             )
         );
     }

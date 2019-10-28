@@ -1,13 +1,19 @@
 {
     "leader": [],
     "worker": [
-        "UserGroupController",
-        "UsersController"
+        "UsersController",
+        "StatusObjectsController"
     ],
     "user": [
-        "tableOneController",
-        "tableTwoController",
-        "UserGroupController",
-        "UsersController"
+        "UsersController",
+        "StatusObjectsController"
+
+    ],
+    "alien": [
+        "UsersController",
+        "CustomerController",
+        "StatusObjectsController",
+        "ObjectsController"
+
     ]
 }
