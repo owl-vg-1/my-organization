@@ -37,14 +37,14 @@ class SignUpController extends AbstractController
             $this->redirect('?t=' . $this->shortClassName() . '&a=showform');
         }
 
-        $userGroupId = (new Table('user_group', DB::Link(Conf::MYSQL)))->get(['cod' => 'dft'])[0]['id'];
+        $userGroupId = (new Table('group_workers', DB::Link(Conf::MYSQL)))->get(['group_workers' => 'alien'])[0]['id'];
 
-        (new Table('users', DB::Link(Conf::MYSQL)))->add([
+        (new Table('workers', DB::Link(Conf::MYSQL)))->add([
             "name" => $_POST["name"],
             "surname" => $_POST["surname"],
             "login" => $_POST["login"],
-            "pass" => $_POST["pass"],
-            "user_group_id" => $userGroupId
+            "password" => $_POST["pass"],
+            "group_workers" => $userGroupId
         ]);
 
         Auth::registerUser($_POST["login"], $_POST["pass"]);
@@ -66,7 +66,7 @@ class SignUpController extends AbstractController
             $_SESSION['checkSignUpData']['Errors'][] = "Введите логин";
         }
 
-        if (!empty((new Table('users', DB::Link(Conf::MYSQL)))->get(['login'=> $data['login']]))) {
+        if (!empty((new Table('workers', DB::Link(Conf::MYSQL)))->get(['login'=> $data['login']]))) {
             $_SESSION['checkSignUpData']['Errors'][] = "Этот логин занят!";
         }
 

@@ -30,7 +30,8 @@ abstract class AbstractTableController extends AbstractController
             'paginationLink' => '?t=' . $this->shortClassName() . '&a=Show&page=',
             'currentPage' => $page,
             'controllerName' => $this->shortClassName(),
-            'tableHeaders' => $this->table->getColumnsComments()
+            'tableHeaders' => $this->table->getColumnsComments(),
+            'deleteEditAccess' => ($_SESSION['user']['group_workers'] == 'leader' || $_SESSION['user']['group_workers'] == 'worker')? true : false 
         ]);
     }
 
