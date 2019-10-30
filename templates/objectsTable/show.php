@@ -26,6 +26,9 @@ foreach ($table as $row) {
         echo "<td><a href='?t=" . $controllerName . "&a=ShowEditForm&id=" . $row['id'] . "' class='btn btn-warning'>Edit</a></td>";
         echo "<td><a href='?t=" . $controllerName . "&a=Delete&id=" . $row['id'] . "' class='btn btn-danger'>Delete</a></td>";
     }
+    // тест на ссылку вывода подробной информации
+    echo "<td><a href='?t=" . $controllerName . "&a=ShowDetails&id=" . $row['id'] . "' class='btn btn-primary'>Show Details</a></td>";
+
 
     echo "</tr>";
 
