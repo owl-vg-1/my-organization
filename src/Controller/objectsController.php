@@ -9,7 +9,7 @@ use App\Core\Conf;
 use TexLab\MyDB\DbEntity;
 
 
-class objectsController extends AbstractTableController
+class ObjectsController extends AbstractTableController
 {
     protected $tableName = 'objects';
     protected $tableNameCustomer = 'customer';
@@ -44,15 +44,14 @@ class objectsController extends AbstractTableController
 
     public function actionShowAddForm()
     {
-        // $tableStatusObjects = new DbEntity('status_objects', DB::Link(Conf::MYSQL));
-
+        $tableCostomer = new DbEntity('customer', DB::Link(Conf::MYSQL));
         $this->view->setPatternsPath('templates/objectsTable/');
         
         $this->render("ShowAddEditForm", [
             'columnsNames' => $this->table->getColumnsNames(),
             'URL' => '?t=' . $this->shortClassName() . '&a=Add',
-            'costomer' => $this->tableCostomer->getColumn('сustomer_name'),
-            'statusObjects' => $tableStatusObjects->getColumn('status_objects'),
+            'costomer' => $tableCostomer->getColumn('сustomer_name'),
+            'statusObjects' => $this->tableStatusObjects->getColumn('status_objects'),
             'tableHeaders' => $this->table->getColumnsComments()
         ]);
     }
@@ -69,18 +68,49 @@ class objectsController extends AbstractTableController
             'customerHeaders' => $this->tableCustomer->getColumnsComments(),
             'statusObjectsInfo' => $this->tableStatusObjects->get(['id'=>$detailsObject[0]['status_objects']]),
             'statusObjectsHeaders' => $this->tableStatusObjects->getColumnsComments(),
-
-            // 'URL' => '?t=' . $this->shortClassName() . '&a=Add',
-
-            // 'table' => $table->getPage($page),
-            // 'pageCount' => $table->pageCount(),
-            // 'paginationLink' => '?t=' . $this->shortClassName() . '&a=Show&page=',
-            // 'controllerName' => $this->shortClassName(),
-            // 'tableHeaders' => $this->table->getColumnsComments(),
-            // 'deleteEditAccess' => ($_SESSION['user']['group_workers'] == 'leader' || $_SESSION['user']['group_workers'] == 'worker')? true : false 
+            'deleteEditAccess' => ($_SESSION['user']['group_workers'] == 'leader' || $_SESSION['user']['group_workers'] == 'worker')? true : false, 
+            'controllerName' => $this->shortClassName(),
         ]);
     }
 
+    public function actionShowAddFileForm() {
+
+
+        $this->render("showAddFileForm", [
+            'URL' => '?t=' . $this->shortClassName() . '&a=AddFile',
+
+
+            // 'objectInfo' => $detailsObject,
+            // 'objectHeaders' => $this->table->getColumnsComments(),
+            // 'customerInfo' => $this->tableCustomer->get(['id'=>$detailsObject[0]['id_customer']]),
+            // 'customerHeaders' => $this->tableCustomer->getColumnsComments(),
+            // 'statusObjectsInfo' => $this->tableStatusObjects->get(['id'=>$detailsObject[0]['status_objects']]),
+            // 'statusObjectsHeaders' => $this->tableStatusObjects->getColumnsComments(),
+            // 'deleteEditAccess' => ($_SESSION['user']['group_workers'] == 'leader' || $_SESSION['user']['group_workers'] == 'worker')? true : false, 
+            // 'controllerName' => $this->shortClassName(),
+        ]);
+
+    }
+
+
+    public function actionAddFile() {
+echo 123;
+
+        // $this->render("showAddFileForm", [
+        //     // 'URL' => '?t=' . $this->shortClassName() . '&a=AddFile',
+
+
+        //     // 'objectInfo' => $detailsObject,
+        //     // 'objectHeaders' => $this->table->getColumnsComments(),
+        //     // 'customerInfo' => $this->tableCustomer->get(['id'=>$detailsObject[0]['id_customer']]),
+        //     // 'customerHeaders' => $this->tableCustomer->getColumnsComments(),
+        //     // 'statusObjectsInfo' => $this->tableStatusObjects->get(['id'=>$detailsObject[0]['status_objects']]),
+        //     // 'statusObjectsHeaders' => $this->tableStatusObjects->getColumnsComments(),
+        //     // 'deleteEditAccess' => ($_SESSION['user']['group_workers'] == 'leader' || $_SESSION['user']['group_workers'] == 'worker')? true : false, 
+        //     // 'controllerName' => $this->shortClassName(),
+        // ]);
+
+    }
 
 
 }
