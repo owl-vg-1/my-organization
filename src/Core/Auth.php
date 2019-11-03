@@ -50,13 +50,16 @@ class Auth
             ),
             true
         );
+
+
         return !in_array(
             strtolower($className),
             array_map(
                 'strtolower',
-                $permits[($_SESSION['user']['cod'] ?? 'user')]
+                $permits[($_SESSION['user']['group_workers'] ?? 'alien')]
             )
         );
+
     }
 
 

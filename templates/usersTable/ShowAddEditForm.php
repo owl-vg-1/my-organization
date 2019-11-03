@@ -1,14 +1,14 @@
 <div>
     <div class='container'>
         <div class='row justify-content-center'>
-            <form action="<?= $URL ?>" method="POST" class="text-center border border-light p-3">
+            <form action="<?= $URL ?>" method="POST" class="text-center border border-success p-3">
                 <?php
                 foreach ($columnsNames as $name) {
                     if ($name != 'id') {
-                        if ($name == 'user_group_id') {
+                        if ($name == 'group_workers') {
 
                             echo "<label>" . (empty($tableHeaders[$name]) ? $name : $tableHeaders[$name]);
-                            echo "<br><select name='user_group_id'>";
+                            echo "<br><select name='group_workers' class='form-control custom-select mb-4'>";
                             foreach ($userGroup as $id => $groupName) {
                                 echo "<option value='$id'>$groupName</option>";
                             }
