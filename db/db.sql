@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 28 2019 г., 23:32
+-- Время создания: Ноя 03 2019 г., 23:45
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.2.22
 
@@ -47,7 +47,8 @@ INSERT INTO `customer` (`id`, `сustomer_name`, `сustomer_UNP`, `customer_addre
 (1, 'ООО', 123456789, 'Адрес ООО', 'Контакты ООО', 'Что-то об ООО'),
 (2, 'ЧУП', 234567891, 'Адрес ЧУП', 'Контакты ЧУП', 'Описание ЧУП'),
 (3, 'ОАО', 345678912, 'Адрес ОАО', 'Контакты ОАО', 'Что-то об ОАО'),
-(5, 'ИП', 567891234, 'Адрес ИП', 'Контакты ИП', 'Что-то об ИП');
+(5, 'ИП', 567891234, 'Адрес ИП', 'Контакты ИП', 'Что-то об ИП'),
+(12, '1', 1, '1', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -96,6 +97,19 @@ INSERT INTO `objects` (`id`, `id_customer`, `object_name`, `beginning_works`, `e
 (5, 5, 'Закупка товаров ИП', '2019-10-28', '2019-10-31', 2, 'Договор у заказчика на рассмотрении'),
 (6, 1, 'Объект ЧУП', '2019-10-01', '2019-10-01', 6, 'Заказчик отказался'),
 (8, 2, 'test chup', '2019-10-29', '2019-10-31', 1, 'test');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `object_file`
+--
+
+CREATE TABLE `object_file` (
+  `id` int(11) NOT NULL COMMENT '№',
+  `id_objects` int(11) NOT NULL,
+  `tmp_name_file` varchar(300) NOT NULL,
+  `name_file` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -170,6 +184,13 @@ ALTER TABLE `objects`
   ADD KEY `status_objects` (`status_objects`);
 
 --
+-- Индексы таблицы `object_file`
+--
+ALTER TABLE `object_file`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_objects` (`id_objects`);
+
+--
 -- Индексы таблицы `status_objects`
 --
 ALTER TABLE `status_objects`
@@ -190,7 +211,7 @@ ALTER TABLE `workers`
 -- AUTO_INCREMENT для таблицы `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '№', AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '№', AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `group_workers`
@@ -202,7 +223,13 @@ ALTER TABLE `group_workers`
 -- AUTO_INCREMENT для таблицы `objects`
 --
 ALTER TABLE `objects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '№', AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '№', AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT для таблицы `object_file`
+--
+ALTER TABLE `object_file`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '№', AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT для таблицы `status_objects`
@@ -226,6 +253,12 @@ ALTER TABLE `workers`
 ALTER TABLE `objects`
   ADD CONSTRAINT `objects_ibfk_1` FOREIGN KEY (`id_customer`) REFERENCES `customer` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `objects_ibfk_2` FOREIGN KEY (`status_objects`) REFERENCES `status_objects` (`id`) ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `object_file`
+--
+ALTER TABLE `object_file`
+  ADD CONSTRAINT `object_file_ibfk_1` FOREIGN KEY (`id_objects`) REFERENCES `objects` (`id`) ON DELETE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `workers`

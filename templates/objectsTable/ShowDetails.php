@@ -14,7 +14,6 @@
                 if ($deleteEditAccess) {
                     echo "<a href='?t=" . $controllerName . "&a=ShowEditForm&id=" .$_GET['id'] . "' class='btn btn-warning'>Edit</a>";
                     echo "<a href='?t=" . $controllerName . "&a=Delete&id=" . $_GET['id'] . "' class='btn btn-danger'>Delete</a>";
-                    echo "<a href='?t=" . $controllerName . "&a=ShowAddFileForm' class='btn bg-info'>AddFile</a>";
                 }
                 
             ?>
@@ -27,18 +26,44 @@
                         echo "<div><h4>$value</h4>".$customerInfo[0][$headersName]."</div>";
                     }
                 }
-                // if ($deleteEditAccess) {
-                //     echo "<a href='?t=customer&a=ShowEditForm&id=" .$customerInfo[0]['id'] . "' class='btn btn-warning'>Edit</a>";
-                // }
-
             ?>
         </div>
         <div class="col"></div>
     </div>
 </div>
+
+
+
 <!-- Файлообменик -->
 <div class="container-fluid border border-primary bg-info mt-5">
+<form action="<?=$URL?>" method="post" enctype="multipart/form-data">
+    <div class='container-fluid'>
+        <div class='row justify-content-center'>
+            <div class='col-8'>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Добавление файла к объекту:</label>
+                <input type="file" name="AddFile" class="form-control-file" id="exampleFormControlFile1">
+            </div>  
+                <?php if ($deleteEditAccess) {
+                        echo "<button type='submit' class='btn btn-primary'>Добавить!</button>";
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+</form>
 
-Файл
+
+<h3>Доступные файлы по объекту:</h3>
+<?php
+    foreach ($files as $filesData) {
+        foreach ($filesData as $key => $value) {
+            if ($key == 'name_file') {
+                echo "<a href=".$URLDownLoad.'&id_file='.$filesData['id'].">".$value."</a><br>";
+            }
+        }
+    }
+
+?>
 
 </div>
