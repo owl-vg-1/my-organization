@@ -1,0 +1,42 @@
+html, body {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#4c53a8), color-stop(#6170b2), color-stop(#768dbd), color-stop(#8ca9c7), color-stop(#a1c6d2), color-stop(#b6e3dc), color-stop(#a1cad8), color-stop(#8db0d3), color-stop(#7897cf), color-stop(#637dcb), color-stop(#4f64c6), to(#3a4ac2));
+  background-image: linear-gradient(to top, #4c53a8, #6170b2, #768dbd, #8ca9c7, #a1c6d2, #b6e3dc, #a1cad8, #8db0d3, #7897cf, #637dcb, #4f64c6, #3a4ac2);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  font-family: 'Pangolin', cursive !important;
+}
+
+html .navbar-expand-lg, body .navbar-expand-lg {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#3c4042), color-stop(#4c5253), color-stop(#5c6464), color-stop(#6b7675), color-stop(#2d2f30), to(#1d1d1f));
+  background-image: linear-gradient(to top, #3c4042, #4c5253, #5c6464, #6b7675, #2d2f30, #1d1d1f);
+  padding: 0 !important;
+  font-family: 'Ruslan Display', cursive;
+}
+
+html .navbar-expand-lg ul, body .navbar-expand-lg ul {
+  width: 100%;
+  height: 100%;
+}
+
+html .navbar-expand-lg ul li, body .navbar-expand-lg ul li {
+  min-height: 65px;
+  display: table;
+}
+
+html .navbar-expand-lg ul li a, body .navbar-expand-lg ul li a {
+  font-size: 25px;
+  height: 100%;
+  padding: 0;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffdb57 !important;
+}
+
+html .navbar-expand-lg ul li:hover, body .navbar-expand-lg ul li:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#1d1d1f), color-stop(#4c5253), color-stop(#5c6464), color-stop(#6b7675), color-stop(#2d2f30), to(#3c4042));
+  background-image: linear-gradient(to top, #1d1d1f, #4c5253, #5c6464, #6b7675, #2d2f30, #3c4042);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+html, body {
+    background-image: linear-gradient(to top, rgb(76, 83, 168), rgb(97, 112, 178), rgb(118, 141, 189), rgb(140, 169, 199), rgb(161, 198, 210), rgb(182, 227, 220), rgb(161, 202, 216), rgb(141, 176, 211), rgb(120, 151, 207), rgb(99, 125, 203), rgb(79, 100, 198), rgb(58, 74, 194));
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    font-family: 'Pangolin', cursive !important;
+
+    .navbar-expand-lg {
+        background-image: linear-gradient(to top,rgb(60, 64, 66),rgb(76, 82, 83),rgb(92, 100, 100),rgb(107, 118, 117),rgb(45, 47, 48),rgb(29, 29, 31));
+        padding: 0 !important;
+        font-family: 'Ruslan Display', cursive; 
+        
+
+        ul {
+            width: 100%;
+            height: 100%;
+            li {
+                min-height: 65px;
+                display: table;
+                a {
+                    font-size: 25px;
+                    height: 100%;
+                    padding: 0;
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+                    color: hsl(47, 100%, 67%) !important;
+                }
+            }
+
+            li:hover {
+                background-image: linear-gradient(to top,rgb(29, 29, 31), rgb(76, 82, 83),rgb(92, 100, 100),rgb(107, 118, 117),rgb(45, 47, 48), rgb(60, 64, 66));
+
+            }
+
+            
+            
+        }
+    
+    }
+
+}
