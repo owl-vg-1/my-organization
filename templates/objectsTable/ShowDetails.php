@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col"></div>
-        <div class="col-7 border border-primary bg-secondary">
+        <div class="col-7">
             <?php
                 echo "<h2>Данные об объекте:</h2>";
                 foreach ($objectHeaders as $headersName => $value) {
@@ -13,12 +13,12 @@
 
                 if ($deleteEditAccess) {
                     echo "<a href='?t=" . $controllerName . "&a=ShowEditForm&id=" .$_GET['id'] . "' class='btn btn-warning'>Edit</a>";
-                    echo "<a href='?t=" . $controllerName . "&a=Delete&id=" . $_GET['id'] . "' class='btn btn-danger'>Delete</a>";
+                    echo "<a href='?t=" . $controllerName . "&a=Delete&id=" . $_GET['id'] . "' class='btn btn-danger m-3'>Delete</a>";
                 }
                 
             ?>
         </div>
-        <div class="col-3 border border-primary bg-secondary">
+        <div class="col-3">
             <?php
                 echo "<h2>Данные о заказчике объекта:</h2>";
                 foreach ($customerHeaders as $headersName => $value) {
@@ -35,25 +35,31 @@
 
 
 <!-- Файлообменик -->
-<div class="container-fluid border border-primary bg-info mt-5">
+<div class="container-fluid mt-5">
+<div class="row">
+
+<div class="col"></div>
+
+<div class="col-3">
 <form action="<?=$URL?>" method="post" enctype="multipart/form-data">
-    <div class='container-fluid'>
-        <div class='row justify-content-center'>
-            <div class='col-8'>
+    
+        
+            
             <div class="form-group">
-                <label for="exampleFormControlFile1">Добавление файла к объекту:</label>
+                <h3><label for="exampleFormControlFile1">Добавление файла к объекту:</label></h3>
                 <input type="file" name="AddFile" class="form-control-file" id="exampleFormControlFile1">
             </div>  
                 <?php if ($deleteEditAccess) {
                         echo "<button type='submit' class='btn btn-primary'>Добавить!</button>";
                     }
                 ?>
-            </div>
-        </div>
-    </div>
+            
+        
+    
 </form>
+</div>
 
-
+<div class="col-7">
 <h3>Доступные файлы по объекту:</h3>
 <?php
     foreach ($files as $filesData) {
@@ -65,5 +71,7 @@
     }
 
 ?>
-
+</div>
+<div class="col"></div>
+</div>
 </div>

@@ -5,7 +5,7 @@
             } 
         ?>
     </div>
-    <form action="<?= $SignUpURL ?>" method="POST" class="text-center border border-light p-5 ">
+    <form action="<?= $SignUpURL ?>" method="POST" class="text-center p-5 ">
         <div class="form-group">
             <input type="text" name="name" value="<?= $newSignUpDate['name'] ?? '' ?>" placeholder = "Введите имя" class="form-control">
         </div> 

@@ -40,4 +40,26 @@ html, body {
     
     }
 
+    .paginationHTML {
+        a {
+            background-color: rgba(248, 248, 248, 0) !important;
+            margin: 3px;
+            border: none !important;
+            color: hsl(308, 43%, 26%) !important;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+        
+    }
+
+    .error {
+        font-size: 25px;
+        text-align: center;
+        color: red;
+        height: 100%;
+        padding-top: 25%;
+        
+    }
+
 }

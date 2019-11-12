@@ -1,7 +1,7 @@
 <div>
     <div class='container'>
         <div class='row justify-content-center'>
-            <form action="<?= $URL ?>" method="POST" class="text-center border border-success p-3">
+            <form action="<?= $URL ?>" method="POST" class="text-center p-3">
                 <?php
                 foreach ($columnsNames as $name) {
                     if ($name != 'id') {

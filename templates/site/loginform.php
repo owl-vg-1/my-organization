@@ -4,7 +4,7 @@
 ?>
 
 <div>
-    <form action="<?= $loginURL ?>" method="POST" class="text-center border border-light p-5">
+    <form action="<?= $loginURL ?>" method="POST" class="text-center p-5">
         <label>
             <input class="form-control mb-4"type="text" name="user" placeholder="User">
         </label><br/>

@@ -39,4 +39,21 @@ html .navbar-expand-lg ul li:hover, body .navbar-expand-lg ul li:hover {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#1d1d1f), color-stop(#4c5253), color-stop(#5c6464), color-stop(#6b7675), color-stop(#2d2f30), to(#3c4042));
   background-image: linear-gradient(to top, #1d1d1f, #4c5253, #5c6464, #6b7675, #2d2f30, #3c4042);
 }
+
+html .paginationHTML a, body .paginationHTML a {
+  background-color: rgba(248, 248, 248, 0) !important;
+  margin: 3px;
+  border: none !important;
+  color: #5f2657 !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+html .error, body .error {
+  font-size: 25px;
+  text-align: center;
+  color: red;
+  height: 100%;
+  padding-top: 25%;
+}
 /*# sourceMappingURL=style.css.map */

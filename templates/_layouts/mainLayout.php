@@ -50,27 +50,18 @@ use App\View\Helper\HTML;
         <li class="nav-item">
           <a class="nav-link" href="?t=signup&a=ShowForm">Sign Up</a>
         </li>
-
-        <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li> -->
       </ul>
     </div>
   </nav>
-  <!-- <div class="container"> -->
-
-    <div id="user_state" class="float-right">
-      <?= Auth::currentUserInfo() . " " . (isset($_SESSION['user']) ? "<a href='?a=logout'>Logout</a>" : "") ?>
-    </div>
-    <br />
-  <!-- </div> -->
+  <div class="container-fluid">
+    <?php 
+    if (isset($_SESSION['user'])) {
+      echo "<div id='user_state' class='row justify-content-end align-items-center' >".
+      Auth::currentUserInfo()
+      ."<a class='btn btn-info my-4 m-0' href='?a=logout'>Logout</a></div>";
+    }
+    ?>
+  </div>
 
   <div id="maincontent">
     <?php $this->body(); ?>

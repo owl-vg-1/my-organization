@@ -1,5 +1,5 @@
 <div>
-    <form action="<?= $URL ?>" method="POST" class="text-center border border-light p-5">
+    <form action="<?= $URL ?>" method="POST" class="text-center p-5">
         <?php
             foreach ($columnsNames as $name) {
                 if ($name != 'id') {
