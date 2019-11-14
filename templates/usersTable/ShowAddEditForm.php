@@ -10,7 +10,12 @@
                             echo "<label>" . (empty($tableHeaders[$name]) ? $name : $tableHeaders[$name]);
                             echo "<br><select name='group_workers' class='form-control custom-select mb-4'>";
                             foreach ($userGroup as $id => $groupName) {
-                                echo "<option value='$id'>$groupName</option>";
+                                if ($editValues['group_workers'] == $id) {
+                                    echo "<option value='$id' selected='selected'>$groupName</option>";
+                                } else {
+                                    echo "<option value='$id'>$groupName</option>";
+                                }
+                                
                             }
 
                             echo "</select></lable><br>";
