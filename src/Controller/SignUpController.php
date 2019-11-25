@@ -21,13 +21,9 @@ class SignUpController extends AbstractController
         unset($_SESSION['checkSignUpData']);
 
         $this->render("showForm", [
-            // 'columnsNames' => $this->table->getColumnsNames(),
-            // 'editValues' => $this->table->get(['id' => $_GET['id']])[0],
             'SignUpURL' => '?t=' . $this->shortClassName() . '&a=registerUser',
             'newSignUpDate' => $newSignUpDate,
             'signUpErrors' => $signUpErrors,
-
-            // 'tableHeaders' => $this->table->getColumnsComments()
         ]);
     }
     public function actionRegisterUser()
@@ -37,7 +33,7 @@ class SignUpController extends AbstractController
             $this->redirect('?t=' . $this->shortClassName() . '&a=showform');
         }
 
-        $userGroupId = (new Table('group_workers', DB::Link(Conf::MYSQL)))->get(['group_workers' => 'alien'])[0]['id'];
+        $userGroupId = (new Table('group_workers', DB::Link(Conf::MYSQL)))->get(['group_workers' => 'user'])[0]['id'];
 
         (new Table('workers', DB::Link(Conf::MYSQL)))->add([
             "name" => $_POST["name"],
@@ -56,6 +52,14 @@ class SignUpController extends AbstractController
     {
         if ($data['pass'] != $data['passrepeat']) {
             $_SESSION['checkSignUpData']['Errors'][] = "Пароли не совпадают";
+        }
+
+        if (empty($data['name'])) {
+            $_SESSION['checkSignUpData']['Errors'][] = "Введите имя";
+        }
+
+        if (empty($data['surname'])) {
+            $_SESSION['checkSignUpData']['Errors'][] = "Введите фамилию";
         }
 
         if (empty($data['pass'])) {
