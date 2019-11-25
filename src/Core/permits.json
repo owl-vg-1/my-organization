@@ -1,19 +1,5 @@
 {
-    "leader": [],
-    "worker": [
-        "UsersController",
-        "StatusObjectsController"
-    ],
-    "user": [
-        "UsersController",
-        "StatusObjectsController"
-
-    ],
-    "alien": [
-        "UsersController",
-        "CustomerController",
-        "StatusObjectsController",
-        "ObjectsController"
-
-    ]
+	"leader": [],
+	"worker": [ "UsersController", "StatusObjectsController" ],
+	"user": [ "UsersController", "StatusObjectsController" ]
 }
