@@ -10,3 +10,7 @@
 * Основной язык проекта - php (mvc)
 * Язык работы с базами данных - sql
 * Оформление CSS, SCSS, bootstrap
+
+
+![Alt-текст](https://github.com/owl-vg-1/my-organization/issues/3#issue-528324678 "ERR")
+
