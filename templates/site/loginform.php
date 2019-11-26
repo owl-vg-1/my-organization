@@ -1,7 +1,6 @@
 <?php
 
 /** @var string $loginURL */
-echo $loginURL;
 ?>
 
 <div>

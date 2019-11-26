@@ -25,42 +25,58 @@ use App\View\Helper\HTML;
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark">
-
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav d-flex justify-content-center">
         <li class="nav-item">
           <a class="nav-link" href="?a=home">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="?t=users&a=show">Сотрудники</a>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Меню руководителя
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="?t=users&a=show">Сотрудники</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="?t=statusObjects&a=show">Состояние объектов</a>
+        </div>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="?t=customer&a=show">Список заказчиков</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="?t=statusObjects&a=show">Состояние объектов</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="?t=objects&a=show">Объекты</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="?a=loginform">Login</a>
-        </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="?t=signup&a=ShowForm">Sign Up</a>
+
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Вход / Регистрация
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="?a=loginform">Вход</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="?t=signup&a=ShowForm">Регистрация</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="?a=logout">Выход</a>
+        </div>
         </li>
       </ul>
     </div>
   </nav>
   <div class="container-fluid">
-    <?php 
-    if (isset($_SESSION['user'])) {
-      echo "<div id='user_state' class='row justify-content-end align-items-center' >".
-      Auth::currentUserInfo()
-      ."<a class='btn btn-info my-4 m-0' href='?a=logout'>Logout</a></div>";
-    }
-    ?>
+    <div class="row">
+      <div class="col text-center" id="user_state">
+        <?php 
+          if (isset($_SESSION['user'])) {
+            echo Auth::currentUserInfo();
+          }
+        ?>
+      </div>
+    </div>
   </div>
 
   <div id="maincontent">
