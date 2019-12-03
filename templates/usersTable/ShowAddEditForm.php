@@ -3,6 +3,9 @@
         <div class='row justify-content-center'>
             <form action="<?= $URL ?>" method="POST" class="text-center p-3">
                 <?php
+                if (isset($_SESSION['dataNewUser'])) {
+                    $editValues = $_SESSION['dataNewUser'];
+                }
                 foreach ($columnsNames as $name) {
                     if ($name != 'id') {
                         if ($name == 'group_workers') {
@@ -32,5 +35,14 @@
                 <input class="btn btn-info my-4" type="submit" value="OK">
             </form>
         </div>
+    </div>
+    <div class='container-fluid'>
+        <ul>
+        <?php
+        foreach ($_SESSION['arrError'] as $key => $error) {
+            echo "<li class='text-danger text-center'>$error</li>";
+        }
+        ?>       
+        <ul>
     </div>
 </div>

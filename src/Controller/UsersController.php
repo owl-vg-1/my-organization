@@ -52,42 +52,34 @@ class UsersController extends AbstractTableController
 
     public function actionAdd()
     {
-        // $checkArray = [];
-        // print_r($_POST);
-        // echo "<br>";
-        // print_r($this->table->get(["login" => $_POST['login']]));
+        $_SESSION['arrError']=[];
+       
+
         //Работает на отсутсвие пустышек
         foreach ($_POST as $key => $value) {
             if (empty($value)) {
                 $checkArray[] = $key . " - не введен!";
             }
         }
-
         // Работает проверка на совпадение логинов
         $checkLoginArray = $this->table->get(["login" => $_POST['login']]);
         if (isset($checkLoginArray[0])) {
             $checkArray[] = "Данный логин занят!";
         }
 
-
-
+        // Добавление записи нового пользователя
         if (isset($checkArray)) {
-            //Вывод ошибок
-            // foreach ($checkArray as $key => $value) {
-            //     echo $value . "<br>";
-            // }
-
-
+            
+            $_SESSION['arrError']=$checkArray;
+            $_SESSION['dataNewUser'] = $_POST;
             $this->redirect('?t=' . $this->shortClassName() . '&a=ShowAddForm');
 
         } else {
-            // $this->table->add($_POST);
-            // $this->redirect('?t=' . $this->shortClassName() . '&a=show');
+            $this->table->add($_POST);
+            $_SESSION['dataNewUser']=[];
+            $this->redirect('?t=' . $this->shortClassName() . '&a=show');
+
         }
 
-
-        // Если не полочится раскоментить эти 2 строки 
-        // $this->table->add($_POST);
-        // $this->redirect('?t=' . $this->shortClassName() . '&a=show');
     }
 }
