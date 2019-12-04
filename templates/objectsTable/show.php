@@ -1,3 +1,15 @@
+<div class="container-fluid">
+    <div class="row justify-content-end p-2">
+        <form action="<?=$searchObjectURL?>" method="POST" class="text-center p-3">
+            <label> Поиск объекта
+                <input class='form-control' type='text' name='searchObject'>
+            </label>
+            <input class="btn btn-info" type="submit" value="Найти">
+        </form>
+    </div>
+</div>
+
+
 <?php
 $paginationHTML = "<nav aria-label='Page navigation example'><ul class='pagination justify-content-center paginationHTML'><li class='page-item'><a class='page-link' href='" . $paginationLink . max($currentPage - 1, 1) . "'><<</a></li>";
 for ($i = 1; $i <= $pageCount; $i++) {

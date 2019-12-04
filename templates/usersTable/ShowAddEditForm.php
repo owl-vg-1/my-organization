@@ -39,8 +39,10 @@
     <div class='container-fluid'>
         <ul>
         <?php
-        foreach ($_SESSION['arrError'] as $key => $error) {
-            echo "<li class='text-danger text-center'>$error</li>";
+        if (isset($_SESSION['arrError'][0])) {
+            foreach ($_SESSION['arrError'] as $key => $error) {
+                echo "<li class='text-danger text-center'>$error</li>";
+            }
         }
         ?>       
         <ul>

@@ -27,6 +27,34 @@ class ObjectsController extends AbstractTableController
 
     }
 
+    public function actionShow()
+    {
+        $page = $_GET['page'] ?? 1;
+        $table = $this->table->setPageSize($this->pageSize);
+        $this->render("show", [
+            'table' => $table->getPage($page),
+            'pageCount' => $table->pageCount(),
+            'paginationLink' => '?t=' . $this->shortClassName() . '&a=Show&page=',
+            'currentPage' => $page,
+            'controllerName' => $this->shortClassName(),
+            'tableHeaders' => $this->table->getColumnsComments(),
+            'searchObjectURL' => '?t=' . $this->shortClassName() . '&a=searchObject',
+            'deleteEditAccess' => ($_SESSION['user']['group_workers'] == 'leader' ||
+                $_SESSION['user']['group_workers'] == 'worker') ? true : false
+        ]);
+    }
+
+    public function actionSearchObject()
+    {
+        print_r($_POST);
+        print_r($this->table->get(["objects.object_name"=>"LIKE 'Объект ОАО'"]));
+
+        // $this->redirect('?t=' . $this->shortClassName() . '&a=show');
+    }
+
+
+
+
     public function actionShowEditForm()
     {
         $tableCostomer = new DbEntity('customer', DB::Link(Conf::MYSQL));

@@ -69,7 +69,6 @@ class UsersController extends AbstractTableController
 
         // Добавление записи нового пользователя
         if (isset($checkArray)) {
-            
             $_SESSION['arrError']=$checkArray;
             $_SESSION['dataNewUser'] = $_POST;
             $this->redirect('?t=' . $this->shortClassName() . '&a=ShowAddForm');
