@@ -44,12 +44,16 @@ class ObjectsController extends AbstractTableController
         ]);
     }
 
-    public function actionSearchObject()
+    public function actionSearchObject() 
     {
-        print_r($_POST);
-        print_r($this->table->get(["objects.object_name"=>"LIKE 'Объект ОАО'"]));
-
-        // $this->redirect('?t=' . $this->shortClassName() . '&a=show');
+        $this->render("showSearch", [
+            'table' => $this->table->searchResults($_POST['searchObject']),
+            'controllerName' => $this->shortClassName(),
+            'tableHeaders' => $this->table->getColumnsComments(),
+            'searchObjectURL' => '?t=' . $this->shortClassName() . '&a=searchObject',
+            'deleteEditAccess' => ($_SESSION['user']['group_workers'] == 'leader' ||
+                $_SESSION['user']['group_workers'] == 'worker') ? true : false
+        ]);
     }
 
 
