@@ -1,5 +1,5 @@
 {
 	"leader": [],
 	"worker": [ "UsersController", "StatusObjectsController" ],
-	"user": [ "UsersController", "StatusObjectsController", "CustomerController", "ObjectsController" ]
+	"user": [ "UsersController", "StatusObjectsController", "CustomerController" ]
 }
