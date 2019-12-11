@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="afd48ea1-2ff4-4777-9ac8-ebe2f227e9a9" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="PHP/C:/OSPanel/domains/my-organization/src/Controller" pinned="false" current-in-tab="false">
+        <entry file="uml://PHP/C:/OSPanel/domains/my-organization/src/Controller">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>PHP</ID>
+              <OriginalElement>$PROJECT_DIR$/src/Controller</OriginalElement>
+              <nodes>
+                <node x="-134.0" y="193.0">\App\Controller\UsersController</node>
+                <node x="482.5" y="25.0">\App\Controller\SiteController</node>
+                <node x="520.0" y="-132.0">\App\Controller\AuthTrait</node>
+                <node x="297.5" y="14.0">\App\Controller\SignUpController</node>
+                <node x="-41.5" y="-19.0">\App\Controller\AbstractTableController</node>
+                <node x="236.0" y="149.0">\App\Controller\ObjectsController</node>
+                <node x="51.0" y="204.0">\App\Controller\statusObjectsController</node>
+                <node x="-319.0" y="204.0">\App\Controller\customerController</node>
+                <node x="212.75" y="-165.0">\App\Controller\AbstractController</node>
+                <node x="143.5" y="14.0">\App\Controller\ErrorController</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="\App\Controller\ObjectsController" target="\App\Controller\AbstractTableController">
+                  <point x="0.0" y="-103.0" />
+                  <point x="328.0" y="119.0" />
+                  <point x="102.875" y="119.0" />
+                  <point x="61.875" y="59.0" />
+                </edge>
+                <edge source="\App\Controller\ErrorController" target="\App\Controller\AbstractController">
+                  <point x="0.0" y="-26.0" />
+                  <point x="210.5" y="-39.0" />
+                  <point x="274.625" y="-39.0" />
+                  <point x="-20.625" y="48.0" />
+                </edge>
+                <edge source="\App\Controller\customerController" target="\App\Controller\AbstractTableController">
+                  <point x="0.0" y="-48.0" />
+                  <point x="-236.5" y="119.0" />
+                  <point x="-20.875" y="119.0" />
+                  <point x="-61.875" y="59.0" />
+                </edge>
+                <edge source="\App\Controller\SignUpController" target="\App\Controller\AbstractController">
+                  <point x="0.0" y="-26.0" />
+                  <point x="380.0" y="-39.0" />
+                  <point x="315.875" y="-39.0" />
+                  <point x="20.625" y="48.0" />
+                </edge>
+                <edge source="\App\Controller\AbstractTableController" target="\App\Controller\AbstractController">
+                  <point x="0.0" y="-59.0" />
+                  <point x="41.0" y="-49.0" />
+                  <point x="233.375" y="-49.0" />
+                  <point x="-61.875" y="48.0" />
+                </edge>
+                <edge source="\App\Controller\SiteController" target="\App\Controller\AuthTrait">
+                  <point x="26.5" y="-15.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="\App\Controller\statusObjectsController" target="\App\Controller\AbstractTableController">
+                  <point x="0.0" y="-48.0" />
+                  <point x="133.5" y="129.0" />
+                  <point x="61.625" y="129.0" />
+                  <point x="20.625" y="59.0" />
+                </edge>
+                <edge source="\App\Controller\SiteController" target="\App\Controller\AbstractController">
+                  <point x="-26.5" y="-15.0" />
+                  <point x="509.0" y="-49.0" />
+                  <point x="357.125" y="-49.0" />
+                  <point x="61.875" y="48.0" />
+                </edge>
+                <edge source="\App\Controller\UsersController" target="\App\Controller\AbstractTableController">
+                  <point x="0.0" y="-59.0" />
+                  <point x="-51.5" y="129.0" />
+                  <point x="20.375" y="129.0" />
+                  <point x="-20.625" y="59.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.3000000000000003" x="-216.38461538461542" y="-78.38461538461542" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constants</Category>
+              </Categories>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PHP/C:/OSPanel/domains/my-organization/src/Core" pinned="false" current-in-tab="false">
+        <entry file="uml://PHP/C:/OSPanel/domains/my-organization/src/Core">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>PHP</ID>
+              <OriginalElement>$PROJECT_DIR$/src/Core</OriginalElement>
+              <nodes>
+                <node x="-246.0" y="5.0">\App\Core\Auth</node>
+                <node x="-246.0" y="-246.0">\App\Core\Conf</node>
+                <node x="20.0" y="-246.0">\App\Core\Router</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="1.0" x="-540.5" y="-153.5" />
+              <SelectedNodes>
+                <node>\App\Core\Auth</node>
+                <node>\App\Core\Conf</node>
+                <node>\App\Core\Router</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constants</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PHP/C:/OSPanel/domains/my-organization/src/Model" pinned="false" current-in-tab="false">
+        <entry file="uml://PHP/C:/OSPanel/domains/my-organization/src/Model">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>PHP</ID>
+              <OriginalElement>$PROJECT_DIR$/src/Model</OriginalElement>
+              <nodes>
+                <node x="-264.159090909091" y="101.68181818181819">\TexLab\MyDB\CRUDInterface</node>
+                <node x="-238.909090909091" y="281.18181818181824">\TexLab\MyDB\Table</node>
+                <node x="-30.90909090909099" y="641.1818181818182">\App\Model\UsersModel</node>
+                <node x="-185.90909090909102" y="641.1818181818182">\App\Model\CustomerModel</node>
+                <node x="-157.90909090909102" y="561.1818181818182">\TexLab\MyDB\DbEntity</node>
+                <node x="22.09090909090901" y="370.18181818181824">\App\Model\AuthModel</node>
+                <node x="-340.909090909091" y="641.1818181818182">\App\Model\ObjectsModel</node>
+                <node x="-61.15909090909099" y="80.18181818181819">\TexLab\MyDB\Runner</node>
+                <node x="-3.6590909090909918" y="-11.818181818181813">\TexLab\MyDB\RunnerInterface</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="\TexLab\MyDB\DbEntity" target="\TexLab\MyDB\Table">
+                  <point x="0.0" y="-15.0" />
+                  <point x="0.0" y="115.0" />
+                </edge>
+                <edge source="\App\Model\AuthModel" target="\TexLab\MyDB\Runner">
+                  <point x="0.0" y="-26.0" />
+                  <point x="58.75" y="70.5" />
+                </edge>
+                <edge source="\TexLab\MyDB\Table" target="\TexLab\MyDB\Runner">
+                  <point x="60.25" y="-115.0" />
+                  <point x="-58.15909090909099" y="256.1818181818182" />
+                  <point x="-2.4090909090909918" y="256.1818181818182" />
+                  <point x="-58.75" y="70.5" />
+                </edge>
+                <edge source="\TexLab\MyDB\Runner" target="\TexLab\MyDB\RunnerInterface">
+                  <point x="0.0" y="-70.5" />
+                  <point x="0.0" y="26.0" />
+                </edge>
+                <edge source="\App\Model\ObjectsModel" target="\TexLab\MyDB\DbEntity">
+                  <point x="0.0" y="-26.0" />
+                  <point x="-273.409090909091" y="616.1818181818182" />
+                  <point x="-144.74242424242436" y="616.1818181818182" />
+                  <point x="-26.333333333333343" y="15.0" />
+                </edge>
+                <edge source="\App\Model\UsersModel" target="\TexLab\MyDB\DbEntity">
+                  <point x="0.0" y="-26.0" />
+                  <point x="36.59090909090901" y="616.1818181818182" />
+                  <point x="-92.0757575757577" y="616.1818181818182" />
+                  <point x="26.333333333333314" y="15.0" />
+                </edge>
+                <edge source="\App\Model\CustomerModel" target="\TexLab\MyDB\DbEntity">
+                  <point x="0.0" y="-26.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="\TexLab\MyDB\Table" target="\TexLab\MyDB\CRUDInterface">
+                  <point x="-60.25" y="-115.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.1" x="-384.3636363636364" y="187.72727272727272" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constants</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PHP/C:/OSPanel/domains/my-organization/src/View" pinned="false" current-in-tab="true">
+        <entry file="uml://PHP/C:/OSPanel/domains/my-organization/src/View">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>PHP</ID>
+              <OriginalElement>$PROJECT_DIR$/src/View</OriginalElement>
+              <nodes>
+                <node x="-418.0" y="-245.0">\App\View\View</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="1.0" x="29.5" y="15.0" />
+              <SelectedNodes>
+                <node>\App\View\View</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constants</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="my-organization" type="cbb8eebc:String" user="my-organization" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="my-organization" type="cbb8eebc:String" user="my-organization" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afd48ea1-2ff4-4777-9ac8-ebe2f227e9a9" name="Default" comment="" />
+      <created>1575388117638</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575388117638</updated>
+      <workItem from="1575388122579" duration="2260000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2260000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10104167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="81" selection-start-column="8" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/table/show.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="161" lean-forward="false" selection-start-line="1" selection-start-column="145" selection-end-line="1" selection-end-column="161" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/C:/OSPanel/domains/my-organization/src/Controller">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>$PROJECT_DIR$/src/Controller</OriginalElement>
+          <nodes>
+            <node x="-134.0" y="193.0">\App\Controller\UsersController</node>
+            <node x="482.5" y="25.0">\App\Controller\SiteController</node>
+            <node x="520.0" y="-132.0">\App\Controller\AuthTrait</node>
+            <node x="297.5" y="14.0">\App\Controller\SignUpController</node>
+            <node x="-41.5" y="-19.0">\App\Controller\AbstractTableController</node>
+            <node x="236.0" y="149.0">\App\Controller\ObjectsController</node>
+            <node x="51.0" y="204.0">\App\Controller\statusObjectsController</node>
+            <node x="-319.0" y="204.0">\App\Controller\customerController</node>
+            <node x="212.75" y="-165.0">\App\Controller\AbstractController</node>
+            <node x="143.5" y="14.0">\App\Controller\ErrorController</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="\App\Controller\ObjectsController" target="\App\Controller\AbstractTableController">
+              <point x="0.0" y="-103.0" />
+              <point x="328.0" y="119.0" />
+              <point x="102.875" y="119.0" />
+              <point x="61.875" y="59.0" />
+            </edge>
+            <edge source="\App\Controller\ErrorController" target="\App\Controller\AbstractController">
+              <point x="0.0" y="-26.0" />
+              <point x="210.5" y="-39.0" />
+              <point x="274.625" y="-39.0" />
+              <point x="-20.625" y="48.0" />
+            </edge>
+            <edge source="\App\Controller\customerController" target="\App\Controller\AbstractTableController">
+              <point x="0.0" y="-48.0" />
+              <point x="-236.5" y="119.0" />
+              <point x="-20.875" y="119.0" />
+              <point x="-61.875" y="59.0" />
+            </edge>
+            <edge source="\App\Controller\SignUpController" target="\App\Controller\AbstractController">
+              <point x="0.0" y="-26.0" />
+              <point x="380.0" y="-39.0" />
+              <point x="315.875" y="-39.0" />
+              <point x="20.625" y="48.0" />
+            </edge>
+            <edge source="\App\Controller\AbstractTableController" target="\App\Controller\AbstractController">
+              <point x="0.0" y="-59.0" />
+              <point x="41.0" y="-49.0" />
+              <point x="233.375" y="-49.0" />
+              <point x="-61.875" y="48.0" />
+            </edge>
+            <edge source="\App\Controller\SiteController" target="\App\Controller\AuthTrait">
+              <point x="26.5" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="\App\Controller\statusObjectsController" target="\App\Controller\AbstractTableController">
+              <point x="0.0" y="-48.0" />
+              <point x="133.5" y="129.0" />
+              <point x="61.625" y="129.0" />
+              <point x="20.625" y="59.0" />
+            </edge>
+            <edge source="\App\Controller\SiteController" target="\App\Controller\AbstractController">
+              <point x="-26.5" y="-15.0" />
+              <point x="509.0" y="-49.0" />
+              <point x="357.125" y="-49.0" />
+              <point x="61.875" y="48.0" />
+            </edge>
+            <edge source="\App\Controller\UsersController" target="\App\Controller\AbstractTableController">
+              <point x="0.0" y="-59.0" />
+              <point x="-51.5" y="129.0" />
+              <point x="20.375" y="129.0" />
+              <point x="-20.625" y="59.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.3000000000000003" x="-216.38461538461542" y="-78.38461538461542" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constants</Category>
+          </Categories>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/C:/OSPanel/domains/my-organization/src/Core">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>$PROJECT_DIR$/src/Core</OriginalElement>
+          <nodes>
+            <node x="-246.0" y="5.0">\App\Core\Auth</node>
+            <node x="-246.0" y="-246.0">\App\Core\Conf</node>
+            <node x="20.0" y="-246.0">\App\Core\Router</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-540.5" y="-153.5" />
+          <SelectedNodes>
+            <node>\App\Core\Auth</node>
+            <node>\App\Core\Conf</node>
+            <node>\App\Core\Router</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constants</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/C:/OSPanel/domains/my-organization/src/Model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>$PROJECT_DIR$/src/Model</OriginalElement>
+          <nodes>
+            <node x="-264.159090909091" y="101.68181818181819">\TexLab\MyDB\CRUDInterface</node>
+            <node x="-238.909090909091" y="281.18181818181824">\TexLab\MyDB\Table</node>
+            <node x="-30.90909090909099" y="641.1818181818182">\App\Model\UsersModel</node>
+            <node x="-185.90909090909102" y="641.1818181818182">\App\Model\CustomerModel</node>
+            <node x="-157.90909090909102" y="561.1818181818182">\TexLab\MyDB\DbEntity</node>
+            <node x="22.09090909090901" y="370.18181818181824">\App\Model\AuthModel</node>
+            <node x="-340.909090909091" y="641.1818181818182">\App\Model\ObjectsModel</node>
+            <node x="-61.15909090909099" y="80.18181818181819">\TexLab\MyDB\Runner</node>
+            <node x="-3.6590909090909918" y="-11.818181818181813">\TexLab\MyDB\RunnerInterface</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="\TexLab\MyDB\DbEntity" target="\TexLab\MyDB\Table">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="115.0" />
+            </edge>
+            <edge source="\App\Model\AuthModel" target="\TexLab\MyDB\Runner">
+              <point x="0.0" y="-26.0" />
+              <point x="58.75" y="70.5" />
+            </edge>
+            <edge source="\TexLab\MyDB\Table" target="\TexLab\MyDB\Runner">
+              <point x="60.25" y="-115.0" />
+              <point x="-58.15909090909099" y="256.1818181818182" />
+              <point x="-2.4090909090909918" y="256.1818181818182" />
+              <point x="-58.75" y="70.5" />
+            </edge>
+            <edge source="\TexLab\MyDB\Runner" target="\TexLab\MyDB\RunnerInterface">
+              <point x="0.0" y="-70.5" />
+              <point x="0.0" y="26.0" />
+            </edge>
+            <edge source="\App\Model\ObjectsModel" target="\TexLab\MyDB\DbEntity">
+              <point x="0.0" y="-26.0" />
+              <point x="-273.409090909091" y="616.1818181818182" />
+              <point x="-144.74242424242436" y="616.1818181818182" />
+              <point x="-26.333333333333343" y="15.0" />
+            </edge>
+            <edge source="\App\Model\UsersModel" target="\TexLab\MyDB\DbEntity">
+              <point x="0.0" y="-26.0" />
+              <point x="36.59090909090901" y="616.1818181818182" />
+              <point x="-92.0757575757577" y="616.1818181818182" />
+              <point x="26.333333333333314" y="15.0" />
+            </edge>
+            <edge source="\App\Model\CustomerModel" target="\TexLab\MyDB\DbEntity">
+              <point x="0.0" y="-26.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="\TexLab\MyDB\Table" target="\TexLab\MyDB\CRUDInterface">
+              <point x="-60.25" y="-115.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.1" x="-384.3636363636364" y="187.72727272727272" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constants</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/C:/OSPanel/domains/my-organization/src/View">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>$PROJECT_DIR$/src/View</OriginalElement>
+          <nodes>
+            <node x="-418.0" y="-245.0">\App\View\View</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="29.5" y="15.0" />
+          <SelectedNodes>
+            <node>\App\View\View</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constants</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
