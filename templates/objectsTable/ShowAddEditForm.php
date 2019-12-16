@@ -10,18 +10,24 @@
                             echo "<label>" . (empty($tableHeaders[$name]) ? $name : $tableHeaders[$name]);
                             echo "<br><select name='$name' class='form-control custom-select mb-4'>";
                             foreach ($costomer as $id => $costomerName) {
-                                echo "<option value='$id'>$costomerName</option>";
+                                if ($editValues['id_customer'] == $id) {
+                                    echo "<option value='$id' selected='selected'>$costomerName</option>";
+                                } else {
+                                    echo "<option value='$id'>$costomerName</option>";
+                                }
                             }
-
                             echo "</select></lable><br>";
                         } elseif ($name == 'status_objects') {
 
                             echo "<label>" . (empty($tableHeaders[$name]) ? $name : $tableHeaders[$name]);
                             echo "<br><select name='$name' class='form-control custom-select mb-4'>";
                             foreach ($statusObjects as $id => $status) {
-                                echo "<option value='$id'>$status</option>";
+                                if ($editValues['status_objects'] == $id) {
+                                    echo "<option value='$id' selected='selected'>$status</option>";
+                                } else {
+                                    echo "<option value='$id'>$status</option>";
+                                }
                             }
-
                             echo "</select></lable><br>";
                         } elseif ($name == 'beginning_works' || $name == 'end_work') {
 

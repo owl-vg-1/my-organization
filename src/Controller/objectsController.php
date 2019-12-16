@@ -162,6 +162,4 @@ class ObjectsController extends AbstractTableController
         $this->redirect('?t=' . $this->shortClassName() . '&a=show');
     }
 
-
-
 }

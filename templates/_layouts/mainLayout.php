@@ -2,7 +2,6 @@
 
 use App\Core\{Auth, ErrorHandler};
 use App\View\Helper\HTML;
-/* @var $this App\View\View */
 
 /** @var string $title */
 ?>
@@ -33,24 +32,34 @@ use App\View\Helper\HTML;
         <li class="nav-item">
           <a class="nav-link" href="?a=home">Home</a>
         </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Меню руководителя
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="?t=users&a=show">Сотрудники</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="?t=statusObjects&a=show">Состояние объектов</a>
-        </div>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="?t=customer&a=show">Список заказчиков</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="?t=objects&a=show">Объекты</a>
-        </li>
-
+        <?php
+          if ($_SESSION['user']['group_workers'] == 'leader') {
+           ?>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Меню руководителя
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="?t=users&a=show">Сотрудники</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="?t=statusObjects&a=show">Состояние объектов</a>
+              </div>
+              </li>
+            <?php
+          }
+        ?>
+        <?php
+          if ($_SESSION['user']['group_workers'] == 'leader' || $_SESSION['user']['group_workers'] == 'worker') {
+           ?>
+            <li class="nav-item">
+              <a class="nav-link" href="?t=customer&a=show">Список заказчиков</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="?t=objects&a=show">Объекты</a>
+            </li>
+            <?php
+          }
+        ?>
 
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
